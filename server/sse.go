@@ -24,6 +24,7 @@ type sseSession struct {
 	sessionID           string
 	notificationChannel chan mcp.JSONRPCNotification
 	initialized         atomic.Bool
+	ext                 any
 }
 
 // SSEContextFunc is a function that takes an existing context and the current
@@ -45,6 +46,14 @@ func (s *sseSession) Initialize() {
 
 func (s *sseSession) Initialized() bool {
 	return s.initialized.Load()
+}
+
+func (s *sseSession) SetExt(ext any) {
+	s.ext = ext
+}
+
+func (s *sseSession) GetExt() any {
+	return s.ext
 }
 
 var _ ClientSession = (*sseSession)(nil)

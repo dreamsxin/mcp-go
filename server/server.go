@@ -55,6 +55,9 @@ type ClientSession interface {
 	NotificationChannel() chan<- mcp.JSONRPCNotification
 	// SessionID is a unique identifier used to track user session.
 	SessionID() string
+	// Ext is an optional extension that can be used to store additional information.
+	SetExt(any)
+	GetExt() any
 }
 
 // clientSessionKey is the context key for storing current client notification channel.
