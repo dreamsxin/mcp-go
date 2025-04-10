@@ -33,7 +33,7 @@ type sseSession struct {
 // content. This can be used to inject context values from headers, for example.
 type SSEContextFunc func(ctx context.Context, r *http.Request) context.Context
 
-func (s *sseSession) Request() *http.Request {
+func (s *sseSession) Request() any {
 	return s.request
 }
 

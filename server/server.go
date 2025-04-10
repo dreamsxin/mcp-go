@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"net/http"
 	"sort"
 	"sync"
 
@@ -55,7 +54,7 @@ type ClientSession interface {
 	// NotificationChannel provides a channel suitable for sending notifications to client.
 	NotificationChannel() chan<- mcp.JSONRPCNotification
 	// Request returns the original request that initiated the session.
-	Request() *http.Request
+	Request() any
 	// SessionID is a unique identifier used to track user session.
 	SessionID() string
 	// Ext is an optional extension that can be used to store additional information.

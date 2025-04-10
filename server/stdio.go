@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"syscall"
 
-	"github.com/mark3labs/mcp-go/mcp"
+	"github.com/dreamsxin/mcp-go/mcp"
 )
 
 // StdioContextFunc is a function that takes an existing context and returns
@@ -53,6 +53,11 @@ func WithStdioContextFunc(fn StdioContextFunc) StdioOption {
 type stdioSession struct {
 	notifications chan mcp.JSONRPCNotification
 	initialized   atomic.Bool
+	ext           any
+}
+
+func (s *stdioSession) Request() any {
+	return nil
 }
 
 func (s *stdioSession) SessionID() string {
@@ -69,6 +74,14 @@ func (s *stdioSession) Initialize() {
 
 func (s *stdioSession) Initialized() bool {
 	return s.initialized.Load()
+}
+
+func (s *stdioSession) SetExt(ext any) {
+	s.ext = ext
+}
+
+func (s *stdioSession) GetExt() any {
+	return s.ext
 }
 
 var _ ClientSession = (*stdioSession)(nil)
