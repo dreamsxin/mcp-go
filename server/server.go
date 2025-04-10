@@ -9,7 +9,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/mark3labs/mcp-go/mcp"
+	"github.com/dreamsxin/mcp-go/mcp"
 )
 
 // resourceEntry holds both a resource and its handler
@@ -188,6 +188,7 @@ func (s *MCPServer) UnregisterSession(
 	sessionID string,
 ) {
 	s.sessions.Delete(sessionID)
+	s.hooks.UnregisterSession(sessionID)
 }
 
 // sendNotificationToAllClients sends a notification to all the currently active clients.
