@@ -220,8 +220,8 @@ func (c *Hooks) RegisterSession(ctx context.Context, session ClientSession) {
 	}
 }
 
-func (c *Hooks) AddOnUnregisterSession(hook OnRegisterSessionHookFunc) {
-	c.OnRegisterSession = append(c.OnRegisterSession, hook)
+func (c *Hooks) AddOnUnregisterSession(hook OnUnregisterSessionHookFunc) {
+	c.OnUnregisterSession = append(c.OnUnregisterSession, hook)
 }
 
 func (c *Hooks) UnregisterSession(sessionID string) {
