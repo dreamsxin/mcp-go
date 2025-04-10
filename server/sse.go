@@ -4,12 +4,14 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"strings"
 	"sync"
 	"sync/atomic"
+	"time"
 
 	"github.com/dreamsxin/mcp-go/mcp"
 	"github.com/google/uuid"
@@ -75,6 +77,8 @@ type SSEServer struct {
 	sessions                     sync.Map
 	srv                          *http.Server
 	contextFunc                  SSEContextFunc
+	keepAlive                    bool
+	keepAliveInterval            time.Duration
 }
 
 // SSEOption defines a function type for configuring SSEServer
@@ -152,6 +156,18 @@ func WithSSEContextFunc(fn SSEContextFunc) SSEOption {
 	}
 }
 
+func WithKeepAliveInterval(keepAliveInterval time.Duration) SSEOption {
+	return func(s *SSEServer) {
+		s.keepAliveInterval = keepAliveInterval
+	}
+}
+
+func WithKeepAlive(keepAlive bool) SSEOption {
+	return func(s *SSEServer) {
+		s.keepAlive = keepAlive
+	}
+}
+
 // NewSSEServer creates a new SSE server instance with the given MCP server and options.
 func NewSSEServer(server *MCPServer, opts ...SSEOption) *SSEServer {
 	s := &SSEServer{
@@ -159,6 +175,8 @@ func NewSSEServer(server *MCPServer, opts ...SSEOption) *SSEServer {
 		sseEndpoint:                  "/sse",
 		messageEndpoint:              "/message",
 		useFullURLForMessageEndpoint: true,
+		keepAlive:                    false,
+		keepAliveInterval:            10 * time.Second,
 	}
 
 	// Apply all options
@@ -250,6 +268,28 @@ func (s *SSEServer) handleSSE(w http.ResponseWriter, r *http.Request) {
 
 	// Start notification handler for this session
 	go func() {
+		if s.keepAlive {
+			if s.keepAliveInterval <= time.Second {
+				s.keepAliveInterval = 10 * time.Second
+			}
+			ticker := time.NewTicker(s.keepAliveInterval)
+			defer ticker.Stop()
+			for {
+				select {
+				case <-ticker.C:
+					select {
+					case session.eventQueue <- fmt.Sprintf(":ping - %s\n\n", time.Now().Format(time.RFC3339)):
+						// Ping sent successfully
+					default:
+						log.Printf("Keep-alive ping dropped: event queue is full")
+					}
+				case <-session.done:
+					return
+				case <-r.Context().Done():
+					return
+				}
+			}
+		}
 		for {
 			select {
 			case notification := <-session.notificationChannel:

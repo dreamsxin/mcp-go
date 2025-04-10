@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mark3labs/mcp-go/mcp"
+	"github.com/dreamsxin/mcp-go/mcp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -1169,6 +1169,10 @@ type fakeSession struct {
 	initialized         bool
 }
 
+func (s fakeSession) Request() any {
+	return nil
+}
+
 func (f fakeSession) SessionID() string {
 	return f.sessionID
 }
@@ -1182,6 +1186,14 @@ func (f fakeSession) Initialize() {
 
 func (f fakeSession) Initialized() bool {
 	return f.initialized
+}
+
+func (s fakeSession) SetExt(ext any) {
+
+}
+
+func (s fakeSession) GetExt() any {
+	return nil
 }
 
 var _ ClientSession = fakeSession{}
