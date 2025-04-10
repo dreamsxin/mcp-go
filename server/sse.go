@@ -17,6 +17,7 @@ import (
 
 // sseSession represents an active SSE connection.
 type sseSession struct {
+	request             *http.Request
 	writer              http.ResponseWriter
 	flusher             http.Flusher
 	done                chan struct{}
@@ -31,6 +32,10 @@ type sseSession struct {
 // request and returns a potentially modified context based on the request
 // content. This can be used to inject context values from headers, for example.
 type SSEContextFunc func(ctx context.Context, r *http.Request) context.Context
+
+func (s *sseSession) Request() *http.Request {
+	return s.request
+}
 
 func (s *sseSession) SessionID() string {
 	return s.sessionID
@@ -225,6 +230,7 @@ func (s *SSEServer) handleSSE(w http.ResponseWriter, r *http.Request) {
 
 	sessionID := uuid.New().String()
 	session := &sseSession{
+		request:             r,
 		writer:              w,
 		flusher:             flusher,
 		done:                make(chan struct{}),
