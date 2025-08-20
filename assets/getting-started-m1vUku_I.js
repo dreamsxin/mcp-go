@@ -1,4 +1,4 @@
-import{u as l,j as s}from"./index-DCOhjSMR.js";const a={title:"Getting Started",description:"undefined"};function r(i){const e={a:"a",code:"code",div:"div",h1:"h1",h2:"h2",h3:"h3",header:"header",li:"li",ol:"ol",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...l(),...i.components};return s.jsxs(s.Fragment,{children:[s.jsx(e.header,{children:s.jsxs(e.h1,{id:"getting-started",children:["Getting Started",s.jsx(e.a,{"aria-hidden":"true",tabIndex:"-1",href:"#getting-started",children:s.jsx(e.div,{"data-autolink-icon":!0})})]})}),`
+import{u as l,j as s}from"./index-Of1dc3It.js";const a={title:"Getting Started",description:"undefined"};function r(i){const e={a:"a",code:"code",div:"div",h1:"h1",h2:"h2",h3:"h3",header:"header",li:"li",ol:"ol",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...l(),...i.components};return s.jsxs(s.Fragment,{children:[s.jsx(e.header,{children:s.jsxs(e.h1,{id:"getting-started",children:["Getting Started",s.jsx(e.a,{"aria-hidden":"true",tabIndex:"-1",href:"#getting-started",children:s.jsx(e.div,{"data-autolink-icon":!0})})]})}),`
 `,s.jsxs(e.h2,{id:"introduction",children:["Introduction",s.jsx(e.a,{"aria-hidden":"true",tabIndex:"-1",href:"#introduction",children:s.jsx(e.div,{"data-autolink-icon":!0})})]}),`
 `,s.jsxs(e.h3,{id:"what-is-mcp",children:["What is MCP?",s.jsx(e.a,{"aria-hidden":"true",tabIndex:"-1",href:"#what-is-mcp",children:s.jsx(e.div,{"data-autolink-icon":!0})})]}),`
 `,s.jsx(e.p,{children:"The Model Context Protocol (MCP) is an open standard that enables secure, controlled connections between AI applications and external data sources and tools. It provides a standardized way for Large Language Models (LLMs) to access and interact with external systems while maintaining security and user control."}),`
@@ -30,7 +30,7 @@ import{u as l,j as s}from"./index-DCOhjSMR.js";const a={title:"Getting Started",
 `,s.jsxs(e.span,{className:"line",children:[s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'    "'}),s.jsx(e.span,{style:{color:"#6F42C1","--shiki-dark":"#F69D50"},children:"fmt"}),s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'"'})]}),`
 `,s.jsx(e.span,{className:"line","data-empty-line":!0,children:" "}),`
 `,s.jsxs(e.span,{className:"line",children:[s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'    "'}),s.jsx(e.span,{style:{color:"#6F42C1","--shiki-dark":"#F69D50"},children:"github.com/dreamsxin/mcp-go/mcp"}),s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'"'})]}),`
-`,s.jsxs(e.span,{className:"line",children:[s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'    "'}),s.jsx(e.span,{style:{color:"#6F42C1","--shiki-dark":"#F69D50"},children:"github.com/mark3labs/mcp-go/server"}),s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'"'})]}),`
+`,s.jsxs(e.span,{className:"line",children:[s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'    "'}),s.jsx(e.span,{style:{color:"#6F42C1","--shiki-dark":"#F69D50"},children:"github.com/dreamsxin/mcp-go/server"}),s.jsx(e.span,{style:{color:"#032F62","--shiki-dark":"#96D0FF"},children:'"'})]}),`
 `,s.jsx(e.span,{className:"line",children:s.jsx(e.span,{style:{color:"#24292E","--shiki-dark":"#ADBAC7"},children:")"})}),`
 `,s.jsx(e.span,{className:"line","data-empty-line":!0,children:" "}),`
 `,s.jsxs(e.span,{className:"line",children:[s.jsx(e.span,{style:{color:"#D73A49","--shiki-dark":"#F47067"},children:"func"}),s.jsx(e.span,{style:{color:"#6F42C1","--shiki-dark":"#DCBDFB"},children:" main"}),s.jsx(e.span,{style:{color:"#24292E","--shiki-dark":"#ADBAC7"},children:"() {"})]}),`
@@ -122,7 +122,7 @@ import{u as l,j as s}from"./index-DCOhjSMR.js";const a={title:"Getting Started",
 `]}),`
 `,s.jsxs(e.h2,{id:"need-help",children:["Need Help?",s.jsx(e.a,{"aria-hidden":"true",tabIndex:"-1",href:"#need-help",children:s.jsx(e.div,{"data-autolink-icon":!0})})]}),`
 `,s.jsxs(e.ul,{children:[`
-`,s.jsxs(e.li,{children:["Check out the ",s.jsx(e.a,{href:"https://github.com/mark3labs/mcp-go/tree/main/examples",children:"examples"})," for more complex use cases"]}),`
+`,s.jsxs(e.li,{children:["Check out the ",s.jsx(e.a,{href:"https://github.com/dreamsxin/mcp-go/tree/main/examples",children:"examples"})," for more complex use cases"]}),`
 `,s.jsxs(e.li,{children:["Join the discussion on ",s.jsx(e.a,{href:"https://discord.gg/RqSS2NQVsY",children:"Discord"})]}),`
-`,s.jsxs(e.li,{children:["Read the full documentation in the ",s.jsx(e.a,{href:"https://github.com/mark3labs/mcp-go/blob/main/README.md",children:"README"})]}),`
+`,s.jsxs(e.li,{children:["Read the full documentation in the ",s.jsx(e.a,{href:"https://github.com/dreamsxin/mcp-go/blob/main/README.md",children:"README"})]}),`
 `]})]})}function c(i={}){const{wrapper:e}={...l(),...i.components};return e?s.jsx(e,{...i,children:s.jsx(r,{...i})}):r(i)}export{c as default,a as frontmatter};

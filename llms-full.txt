@@ -325,7 +325,7 @@ import (
     "fmt"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -439,9 +439,9 @@ MCP-Go supports multiple transport methods:
 
 ### Need Help?
 
-* Check out the [examples](https://github.com/mark3labs/mcp-go/tree/main/examples) for more complex use cases
+* Check out the [examples](https://github.com/dreamsxin/mcp-go/tree/main/examples) for more complex use cases
 * Join the discussion on [Discord](https://discord.gg/RqSS2NQVsY)
-* Read the full documentation in the [README](https://github.com/mark3labs/mcp-go/blob/main/README.md)
+* Read the full documentation in the [README](https://github.com/dreamsxin/mcp-go/blob/main/README.md)
 
 
 ## Quick Start
@@ -460,7 +460,7 @@ import (
     "fmt"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -577,8 +577,8 @@ import (
     "log"
     "time"
 
-    "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/client/transport"
+    "github.com/dreamsxin/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client/transport"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -664,8 +664,8 @@ import (
     "log"
     "time"
 
-    "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/client/transport"
+    "github.com/dreamsxin/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client/transport"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -768,8 +768,8 @@ import (
     "context"
     "fmt"
     
-    "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/client/transport"
+    "github.com/dreamsxin/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client/transport"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -854,7 +854,7 @@ import (
     "strings"
     "os"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 type MockSamplingHandler struct{}
@@ -1244,7 +1244,7 @@ SSE and StreamableHTTP transports do not support sampling due to their one-way o
 
 * Learn about [server-side sampling implementation](/servers/advanced-sampling)
 * Explore [client operations](/clients/operations)
-* Check out the [sampling examples](https://github.com/mark3labs/mcp-go/tree/main/examples/sampling_client)
+* Check out the [sampling examples](https://github.com/dreamsxin/mcp-go/tree/main/examples/sampling_client)
 * See [in-process transport documentation](/transports/inprocess) for embedded scenarios
 
 
@@ -1287,7 +1287,7 @@ import (
     "sync"
     "time"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -2024,7 +2024,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -2187,7 +2187,7 @@ import (
     "sync"
     "time"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -2476,7 +2476,7 @@ import (
     "sync"
     "time"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
@@ -3381,7 +3381,7 @@ Consider implementing sampling when your client:
 #### Basic Implementation
 
 ```go
-import "github.com/mark3labs/mcp-go/client"
+import "github.com/dreamsxin/mcp-go/client"
 
 // Implement the SamplingHandler interface
 type MySamplingHandler struct {
@@ -3452,9 +3452,9 @@ import (
     "sync"
     "time"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func createStdioClient() {
@@ -4523,7 +4523,7 @@ package main
 import (
     "context"
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -4756,7 +4756,7 @@ import (
     "time"
     
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -4904,7 +4904,7 @@ For these transports, consider implementing LLM integration directly in your too
 
 * Learn about [client-side sampling implementation](/clients/advanced-sampling)
 * Explore [advanced server features](/servers/advanced)
-* Check out the [sampling examples](https://github.com/mark3labs/mcp-go/tree/main/examples/sampling_server)
+* Check out the [sampling examples](https://github.com/dreamsxin/mcp-go/tree/main/examples/sampling_server)
 * See [in-process sampling documentation](/transports/inprocess#sampling-support) for embedded scenarios
 
 
@@ -4928,7 +4928,7 @@ import (
     "time"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 // Define input and output types
@@ -5741,7 +5741,7 @@ import (
     "fmt"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -5890,7 +5890,7 @@ The foundation of any MCP server is the `NewMCPServer()` function. This creates 
 package main
 
 import (
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -6216,7 +6216,7 @@ import (
     "time"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 var start time.Time
@@ -6371,7 +6371,7 @@ import (
     "fmt"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -7079,7 +7079,7 @@ import (
     "fmt"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 // Database table resource
@@ -8551,7 +8551,7 @@ import (
     "time"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -9247,8 +9247,8 @@ import (
     "os"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/client"
 )
 
 func main() {
@@ -9535,8 +9535,8 @@ import (
     "log"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/client"
 )
 
 func main() {
@@ -9790,9 +9790,9 @@ import (
     "fmt"
     "log"
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 // MockSamplingHandler implements client.SamplingHandler for demonstration
@@ -10163,7 +10163,7 @@ import (
     "time"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -10549,7 +10549,7 @@ import (
     "strings"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -10715,7 +10715,7 @@ import (
     "time"
 
     "github.com/dreamsxin/mcp-go/mcp"
-    "github.com/mark3labs/mcp-go/server"
+    "github.com/dreamsxin/mcp-go/server"
 )
 
 func main() {
@@ -10831,7 +10831,7 @@ import (
     "time"
 
 
-    "github.com/mark3labs/mcp-go/client"
+    "github.com/dreamsxin/mcp-go/client"
     "github.com/dreamsxin/mcp-go/mcp"
 )
 
