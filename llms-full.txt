@@ -324,7 +324,7 @@ import (
     "context"
     "fmt"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -459,7 +459,7 @@ import (
     "context"
     "fmt"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -579,7 +579,7 @@ import (
 
     "github.com/mark3labs/mcp-go/client"
     "github.com/mark3labs/mcp-go/client/transport"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 func main() {
@@ -666,7 +666,7 @@ import (
 
     "github.com/mark3labs/mcp-go/client"
     "github.com/mark3labs/mcp-go/client/transport"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 func main() {
@@ -770,7 +770,7 @@ import (
     
     "github.com/mark3labs/mcp-go/client"
     "github.com/mark3labs/mcp-go/client/transport"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 type MySamplingHandler struct {
@@ -855,7 +855,7 @@ import (
     "os"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 type MockSamplingHandler struct{}
 
@@ -1288,7 +1288,7 @@ import (
     "time"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 func createStdioClient() (client.Client, error) {
@@ -2025,7 +2025,7 @@ import (
     "log"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 func main() {
@@ -2188,7 +2188,7 @@ import (
     "time"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 type MCPClientManager struct {
@@ -2477,7 +2477,7 @@ import (
     "time"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 func listResources(ctx context.Context, c client.Client) error {
@@ -3453,7 +3453,7 @@ import (
     "time"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -4522,7 +4522,7 @@ package main
 
 import (
     "context"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -4755,7 +4755,7 @@ import (
     "log"
     "time"
     
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -4927,7 +4927,7 @@ import (
     "fmt"
     "time"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -5740,7 +5740,7 @@ import (
     "context"
     "fmt"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -6215,7 +6215,7 @@ import (
     "fmt"
     "time"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -6370,7 +6370,7 @@ import (
     "context"
     "fmt"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -7078,7 +7078,7 @@ import (
     "encoding/json"
     "fmt"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -8550,7 +8550,7 @@ import (
     "strings"
     "time"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -9246,7 +9246,7 @@ import (
     "log"
     "os"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
     "github.com/mark3labs/mcp-go/client"
 )
@@ -9534,7 +9534,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
     "github.com/mark3labs/mcp-go/client"
 )
@@ -9791,7 +9791,7 @@ import (
     "log"
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -10162,7 +10162,7 @@ import (
     "log"
     "time"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -10548,7 +10548,7 @@ import (
     "path/filepath"
     "strings"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -10714,7 +10714,7 @@ import (
     "syscall"
     "time"
 
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
     "github.com/mark3labs/mcp-go/server"
 )
 
@@ -10832,7 +10832,7 @@ import (
 
 
     "github.com/mark3labs/mcp-go/client"
-    "github.com/mark3labs/mcp-go/mcp"
+    "github.com/dreamsxin/mcp-go/mcp"
 )
 
 func main() {
